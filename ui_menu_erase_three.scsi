@@ -1,0 +1,17 @@
+ui_menu_erase_three <- ui_user_command_class_atom;
+
+=> nrel_main_idtf: [Удаление всех элементов множества] (* <- lang_ru;; *);
+=> nrel_main_idtf: [Erase all elements] (* <- lang_en;; *);;
+
+ui_menu_erase_three => ui_nrel_command_template:
+	[*
+		question_erase_three _-> ._question_erase_three_instance
+			(*
+			_-> ui_arg_1;;
+			*);;
+		._question_erase_three_instance _<- question;;
+	*];;
+
+ui_menu_erase_three => ui_nrel_command_lang_template: [Удаление элементов множества: $ui_arg_1] (* <- lang_ru;; *);;
+ui_menu_erase_three => ui_nrel_command_lang_template: [Erase elements from set: $ui_arg_1] (* <- lang_en;; *);;
+
